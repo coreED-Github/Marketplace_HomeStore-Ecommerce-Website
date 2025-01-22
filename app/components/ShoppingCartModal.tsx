@@ -9,7 +9,7 @@ import {
 
 import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
-
+import Link from "next/link";
 export default function ShoppingCartModal() {
   const {
     cartCount,
@@ -98,10 +98,14 @@ export default function ShoppingCartModal() {
               Shipping and taxes are calculated at checkout.
             </p>
 
-            <div className="mt-6">
-              <Button onClick={handleCheckoutClick} className="w-full">
-                Checkout
-              </Button>
+            <div className="mt-6 flex justify-center items-center">
+              
+  <Link href="/Checkout">
+                <Button className="bg-white flex justify-center items-center text-black border border-gray-700 rounded-md px-4 py-2">
+                  Check Out
+                </Button>
+              </Link>
+
             </div>
 
             <div className="mt-6 flex justify-center text-center text-sm text-gray-500">

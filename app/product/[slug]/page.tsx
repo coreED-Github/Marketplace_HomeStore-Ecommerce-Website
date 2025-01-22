@@ -1,32 +1,33 @@
-
 import AddToBag from "@/app/components/AddToBag";
-import CheckoutNow from "@/app/components/CheckoutNox";
 import ImageGallery from "@/app/components/ImageGallery";
+import Quantity from "@/app/components/Quantity";
+import RatingComponent from "@/app/components/RatingComponent";
+import { ArrowRight  , ArrowLeft} from "lucide-react";
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import { Button } from "@/components/ui/button";
-import { Star, Truck } from "lucide-react";
+import { Truck } from "lucide-react";
+import Link from "next/link";
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
         _id,
-          images,
-          price,
-          name,
-          description,
-          "slug": slug.current,
-          "categoryName": category->name,
-          price_id
+        images,
+        price,
+        name,
+        description,
+        "slug": slug.current,
+        "categoryName": category->name,
+        price_id
       }`;
 
-  const data = await client.fetch(query, {} , {cache: 'no-store'});
-
+  const data = await client.fetch(query, {}, { cache: "no-store" });
   return data;
 }
 
 export const dynamic = "force-dynamic";
 
-export default async function ProductPge({
+export default async function ProductPage({
   params,
 }: {
   params: { slug: string };
@@ -34,53 +35,59 @@ export default async function ProductPge({
   const data: fullProduct = await getData(params.slug);
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-        <div className="grid gap-8 md:grid-cols-2">
+    <div className=" px-3 py-3 sm:px-6 lg:px-6">
+      <div className="mx-auto max-w-screen-lg">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 items-start">
+        
+          <div >
           <ImageGallery images={data.images} />
+          </div>
+          
 
-          <div className="md:py-8">
-            <div className="mb-2 md:mb-3">
-              <span className="mb-0.5 inline-block text-gray-500">
+          <div className=" border border-gray-300 p-5 mr-4 bg-white flex flex-col justify justify items-start ">
+            <div className="mb-2 ">
+              <span className="block text-sm text-gray-500 mb-1">
                 {data.categoryName}
               </span>
-              <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
                 {data.name}
-              </h2>
+              </h1>
             </div>
 
-            <div className="mb-6 flex items-center gap-3 md:mb-10">
-              <Button className="rounded-full gap-x-2">
-                <span className="text-sm">4.2</span>
-                <Star className="h-5 w-5" />
-              </Button>
-
-              <span className="text-sm text-gray-500 transition duration-100">
-                67 Ratings
-              </span>
+           
+            <div className="mb-2 mt-3 flex items-center gap-2">
+              <RatingComponent />
+              
             </div>
 
-            <div className="mb-4">
-              <div className="flex items-end gap-2">
-                <span className="text-xl font-bold text-gray-800 md:text-2xl">
+            {/* Price Section */}
+            <div className="mb-6">
+              <div className="flex items-end gap-3">
+                <span className="text-2xl sm:text-3xl font-bold text-gray-800">
                   ${data.price}
                 </span>
-                <span className="mb-0.5 text-red-500 line-through">
+                <span className="text-sm text-red-500 line-through">
                   ${data.price + 30}
                 </span>
               </div>
-
-              <span className="text-sm text-gray-500">
-                Incl. Vat plus shipping
-              </span>
+              <p className="text-sm text-gray-500 mt-1">
+                Incl. VAT plus shipping
+              </p>
             </div>
 
-            <div className="mb-6 flex items-center gap-2 text-gray-500">
-              <Truck className="w-6 h-6" />
-              <span className="text-sm">2-4 Day Shipping</span>
+           
+            <div className="mb-2">
+              <Quantity />
             </div>
 
-            <div className="flex gap-2.5">
+           
+            <div className="mb-2 flex items-center gap-2 text-gray-500">
+              <Truck className="w-5 h-5" />
+              <span>2-4 Day Shipping</span>
+            </div>
+
+           
+            <div className="flex flex-wrap gap-4">
               <AddToBag
                 currency="USD"
                 description={data.description}
@@ -90,21 +97,20 @@ export default async function ProductPge({
                 key={data._id}
                 price_id={data.price_id}
               />
-              <CheckoutNow
-                currency="USD"
-                description={data.description}
-                image={data.images[0]}
-                name={data.name}
-                price={data.price}
-                key={data._id}
-                price_id={data.price_id}
-              />
+              <Link href="/Checkout">
+                <Button className="bg-white text-black border border-gray-800 px-4 py-2 rounded-md">
+                  Check Out
+                </Button>
+              </Link>
             </div>
 
-            <p className="mt-12 text-base text-gray-500 tracking-wide">
+            {/* Description */}
+            <p className="mt-8 text-sm text-gray-600 leading-relaxed">
               {data.description}
             </p>
           </div>
+         
+
         </div>
       </div>
     </div>

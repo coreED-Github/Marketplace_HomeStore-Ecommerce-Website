@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="container mx-auto grid grid-cols-2  md:grid-cols-5 gap-8 px-4">
 
                 <div>
-                    <h4 className="font-bold text-2xl sm:text-0.5xl mb-4">Avion</h4>
+                    <h4 className="font-bold text-2xl sm:text-0.5xl mb-4">HomeStore Market</h4>
                     <p className="mb-4 text-sm">Get 10% off your first order</p>
                     <form className="flex items-center">
                         <input
@@ -26,7 +26,7 @@ export default function Footer() {
 
 
                 <div>
-                    <h4 className="font-bold text-1xl mb-4">Avion</h4>
+                    <h4 className="font-bold text-1xl mb-4">HomeStore Market</h4>
                     <p className="text-sm">21 New York Street</p>
                     <p>New York City</p>
                     <p className="mt-4">United States of America</p>
@@ -50,27 +50,27 @@ export default function Footer() {
                     <h4 className="font-bold text-1xl mb-4">Menu</h4>
                     <ul className="text-sm">
                         <li className="mb-2">
-                            <a href="/Ceramics" className="hover:underline">
+                            <a href="/components/Banner" className="hover:underline">
                                 New Arrival
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="/Ceramics" className="hover:underline">
-                                Best Seller
+                            <a href="/Furniture" className="hover:underline">
+                              Furniture  
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="/List" className="hover:underline">
-                                Recently viewed
+                            <a href="/HomeDecor" className="hover:underline">
+                                Home Decor
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="/List" className="hover:underline">
+                            <a href="/components/Newest" className="hover:underline">
                                 Popular this week
                             </a>
                         </li>
                         <li>
-                            <a href="/List" className="hover:underline">
+                            <a href="/components/All" className="hover:underline">
                                 All Products
                             </a>
                         </li>
@@ -81,28 +81,28 @@ export default function Footer() {
                     <h4 className="font-bold text-1xl mb-4">Categories</h4>
                     <ul className="text-sm">
                         <li className="mb-2">
-                            <a href="/D2" className="hover:underline">
-                                Crockery
+                            <a href="/Furniture" className="hover:underline">
+                               Furniture
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="/Detail1" className="hover:underline">
-                                Furniture
+                            <a href="/HomeDecor" className="hover:underline">
+                              HomeDecor
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="#" className="hover:underline">
-                                Home Work
+                            <a href="/components/Brand" className="hover:underline">
+                           Specialties
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="/D2" className="hover:underline">
-                                Plant Pots
+                            <a href="/components/Newest" className="hover:underline">
+                               Luxuries
                             </a>
                         </li>
                         <li>
-                            <a href="/Detail1" className="hover:underline">
-                                Chairs
+                            <a href="/HomeDecor" className="hover:underline">
+                                Electronic
                             </a>
                         </li>
                     </ul>
@@ -112,17 +112,17 @@ export default function Footer() {
                     <h4 className="font-bold text-1xl mb-4">Our company</h4>
                     <ul className="text-sm">
                         <li className="mb-2">
-                            <a href="#" className="hover:underline">
+                            <a href="/components/About" className="hover:underline">
                                 About us
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="#" className="hover:underline">
+                            <a href="/components/Contact" className="hover:underline">
                                 Vacancies
                             </a>
                         </li>
                         <li className="mb-2">
-                            <a href="/Contact" className="hover:underline">
+                            <a href="/components/Contact" className="hover:underline">
                                 Contact us
                             </a>
                         </li>
@@ -138,7 +138,7 @@ export default function Footer() {
 
             </div>
             <div className="border-t border-gray-700 mt-8 pt-4 text-center text-lg">
-                <p className="text-gray-400">© Copyright 2022.LTD</p>
+                <p className="text-gray-400">© Copyright 2025.LTD</p>
             </div>
         </footer>
     );

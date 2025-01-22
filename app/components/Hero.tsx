@@ -15,8 +15,11 @@ export default async function Hero() {
   return (
     <section className="sm:pb-6 lg:max-w-7xl lg:px-8 mx-auto max-w-2xl px-4 ">
       <div className="mb-8 flex flex-wrap justify-between md:mb-16 ">
+     
+
+
         <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-18 lg:pt-2">
-          <h1 className="md:mb-8 md:text-6xl font-serif mb-4 text-4xl font-bold text-orange-950 sm:text-5xl ">
+          <h1 className="md:mb-8 md:text-2xl font-serif mb-4 text-3xl font-bold text-orange-950 sm:text-2xl lg:text-4xl ">
           Stylish Living Starts Here!
 </h1>
           <p className="xl:text-lg max-w-md leading-relaxed text-gray-600 ">
@@ -63,17 +66,12 @@ export default async function Hero() {
             Furnitur
           </Link>
           <Link
-            href="/Home Decor"
+            href="/HomeDecor"
             className="flex w-1/2 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
           >
             HomeDecor
           </Link>
-          <Link
-            href="/Furniture"
-            className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
-          >
-            Luxuries
-          </Link>
+         
         </div>
       </div>
     </section>

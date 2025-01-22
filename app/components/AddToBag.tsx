@@ -31,11 +31,13 @@ export default function AddToBag({
   };
   return (
     <Button
+    className="bg-white text-black border border-gray-600 "
       onClick={() => {
         addItem(product), handleCartClick();
       }}
     >
-      Add To Cart
+      Quick Add
     </Button>
   );
 }
+
