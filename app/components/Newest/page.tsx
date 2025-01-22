@@ -98,7 +98,7 @@ useEffect(() => {
                 key={product._id}
                 className="group relative min-w-[300px] flex-shrink-0 "
               >
-                <Link href={`/product/${product.slug}`}>
+               
                   <div className="aspect-square w-[300px] h-[250px]  overflow-hidden rounded-md bg-white group-hover:opacity-75">
 
                     <Image
@@ -109,18 +109,14 @@ useEffect(() => {
                       height={300}
                     />
                   </div>
-                </Link>
-
-
-
-                <div className="mt-4 flex justify-between">
+             <div className="mt-4 flex justify-between">
                   <div>
-                    <h3 className="text-sm text-gray-700">
+                    <h3 className="text-sm text-gray-blue">
                       <Link href={`/product/${product.slug}`}>
                         {product.name}
                       </Link>
                     </h3>
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="mt-1 text-sm text-blue-500">
                       {product.categoryName}
                     </p>
                   </div>

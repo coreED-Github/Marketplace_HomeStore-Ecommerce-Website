@@ -80,7 +80,7 @@ export default function All() {
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-10">
           {data.map((product) => (
             <div key={product._id} className="group relative">
-              <Link href={`/product/${product.slug}`}>
+             
                 <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
                   <Image
                     src={product.imageUrl}
@@ -90,10 +90,10 @@ export default function All() {
                     height={300}
                   />
                 </div>
-              </Link>
+             
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700">
+                  <h3 className="text-sm text-blue-700">
                     <Link href={`/product/${product.slug}`}>{product.name}</Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">
