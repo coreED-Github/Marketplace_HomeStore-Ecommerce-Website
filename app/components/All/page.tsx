@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Product } from "use-shopping-cart/core";
 import { client } from "../../lib/sanity";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import AddToBag from "../AddToBag";  
 import Rating from "../Reting";
@@ -82,21 +82,15 @@ export default function All() {
             <div key={product._id} className="group relative">
              
                 <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                 <img
+                 <Image
                     src={product.imageUrl}
                     alt="Product image"
                     className="w-full h-full object-cover object-center"
-                   
+                   height={500}
+                   width={500}
                   />
                 </div>
-{/* <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
-                  <img
-                    src={product.imageUrl}
-                    alt="Product image"
-                    className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                   
-                  />
-                </div> */}
+
                 <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-blue-700">

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Product } from "use-shopping-cart/core";
 import { client } from "@/app/lib/sanity";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-
+import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import AddToBag from "../AddToBag";
 import Rating from "../Reting";
@@ -101,11 +101,12 @@ useEffect(() => {
                
                   <div className="aspect-square w-[300px] h-[250px]  overflow-hidden rounded-md bg-white group-hover:opacity-75">
 
-                    <img
+                    <Image
                       src={product.imageUrl}
                       alt="Product image"
                       className="w-full h-full object-cover object-center"
-                      
+                      height={500}
+                      width={500}
                     />
                   </div>
              <div className="mt-4 flex justify-between">
