@@ -506,24 +506,9 @@ The Product Details API performs well in terms of returning the correct status a
 ### 1. Error Handling with Try-Catch
 In the handleCheckoutClick function, a try-catch block is used to handle any errors that may occur during the checkout process. This ensures the application doesn't crash and provides feedback to the user if something goes wrong.
 
-*Code Example*:
-
-```ts
-async function handleCheckoutClick(event: any) {
-  event.preventDefault();
-  try {
-    const result = await redirectToCheckout();
-    if (result?.error) {
-      console.log("result"); // Log error for debugging
-    }
-  } catch (error) {
-    console.log(error); // Catch and log any errors during checkout
-  }
-}
-
-
-
 ---
+
+
 ## *Documentation Link Day 05*
 
 https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%20Day%205.pdf
