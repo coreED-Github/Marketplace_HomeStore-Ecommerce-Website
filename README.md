@@ -226,6 +226,7 @@ By focusing on the technical preparation for the marketplace, I’ve laid the fo
 https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%2002.pdf
 
 
+---
 
 # Hackathon Day 03 - API Integration and Data Migration
 
@@ -298,5 +299,125 @@ Day 3 was a crucial step in building my marketplace backend. I successfully inte
 ## *Documentation Link Day 03*
 
 https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%20Day%2003%20Task.pdf
+
+
+---
+
+# Day 4 - Dynamic Frontend Components for Marketplace
+
+On Day 4, I focused on designing and developing dynamic frontend components for my marketplace. I worked on creating modular and reusable components to display data fetched from Sanity CMS and APIs. This day helped me learn real-world practices for building scalable and responsive web applications, ensuring my components could be easily maintained and adapted for future needs. I gained hands-on experience in structuring components to handle marketplace data effectively, improving both functionality and user experience.
+
+## Key Components Built
+
+### Product Listing Component Documentation
+
+The Newest component fetches and displays a list of products stored in Sanity CMS. It provides users with a scrollable horizontal carousel view of the latest products and includes features like product details, images, and an "Add to Bag" button for interaction. The component is responsive and styled using TailwindCSS.
+
+#### Features:
+1. *Dynamic Data Fetching:*
+   - Fetches product data using Sanity's GROQ query.
+   - Displays the most recent products sorted by creation date.
+2. *Horizontal Scrolling:*
+   - Users can scroll through the product list using left/right arrow buttons or by swiping.
+3. *Interactive UI:*
+   - Displays product image, name, category, price, and rating.
+   - Includes an "Add to Bag" button for quick actions.
+4. *Responsive Design:*
+   - Optimized for various screen sizes using TailwindCSS classes.
+5. *Dynamic Routing:*
+   - Clicking on a product navigates to its detailed page using a dynamic route (/product/[slug]).
+
+#### Code Structure:
+- *Data Fetching:*
+  - fetchProducts(): Fetches products from Sanity CMS using the GROQ query.
+
+### Product Detail Page
+
+The Product Detail Page allows users to view detailed information about a selected product. This page includes product images, pricing, category, ratings, description, quantity adjustment, reviews, and options to add the product to the cart or proceed directly to checkout. The page is dynamic and fetches product data based on the product slug.
+
+#### Features and Functionalities:
+1. *Dynamic Data Fetching:*
+   - getData(): Retrieves product data from Sanity CMS using GROQ queries.
+   - Data includes product images, name, price, description, category name, slug, and price ID.
+2. *Image Gallery:*
+   - ImageGallery: Displays a carousel of product images.
+3. *Product Details:*
+   - Displays category name, product name, ratings, price, and a strikethrough for discounted prices.
+4. *Pricing Section:*
+   - Displays the current price and mentions that the price is inclusive of VAT.
+5. *Quantity Adjustment:*
+   - Allows users to adjust product quantity before adding it to the cart.
+6. *Add to Bag and Checkout:*
+   - Users can add the product to their shopping bag or proceed to checkout.
+
+### Shopping Cart Functionality
+
+The Shopping Cart Modal provides the following functionalities:
+1. *Add to Cart:* Users can quickly add products to the cart from the product listing.
+2. *View Cart:* The cart displays selected products, quantities, prices, and total cost.
+3. *Remove Items:* Users can remove products from the cart.
+4. *Total Calculation:* Displays the subtotal cost of all products in the cart.
+5. *Checkout Option:* Users can proceed to the checkout page.
+6. *Continue Shopping:* Users can close the modal to return to shopping.
+
+#### Code Features:
+- *Components and Dependencies:*
+  - use-shopping-cart: Handles cart state and related functions.
+  - next/link: For navigation to the checkout page.
+  - next/image: Optimized image rendering.
+  - Button, Sheet, SheetContent, SheetHeader, SheetTitle: For displaying a modal-style cart.
+
+### Contact Us Page
+
+This page allows users to send inquiries, questions, or feedback. It integrates a form to collect user input and uses the EmailJS service to send messages.
+
+#### Features:
+1. *User Input Form:* 
+   - Collects name, email, phone (optional), and message.
+   - Includes input validation for required fields (name, email, and message).
+2. *Email Sending:* 
+   - Uses EmailJS to send form data to a predefined email address.
+   - Includes alerts for success and failure states.
+3. *Contact Information Display:*
+   - Displays phone numbers, email addresses, and social media links.
+
+### Responsive Navbar
+
+This navbar component is designed for a dynamic e-commerce website and is optimized for different screen sizes. It includes navigation links, a shopping cart button, and a collapsible mobile menu.
+
+#### Key Features:
+1. *Responsive Design:*
+   - Horizontal navbar for large devices, collapsible menu for mobile devices.
+2. *Dynamic Active Link Highlight:* 
+   - Highlights the currently active page.
+3. *Shopping Cart Integration:*
+   - Includes a button to trigger the shopping cart modal.
+4. *Collapsible Menu:*
+   - For mobile screens, a collapsible sidebar menu is implemented.
+
+### Project Summary: Functional Product Listing and Dynamic Features in E-Commerce Platform
+
+I successfully implemented key features for a functional e-commerce platform using Next.js and Sanity CMS. The following tasks were completed:
+1. *Product Listing Page:* 
+   - Developed a fully functional product listing page that dynamically fetches and displays product data from Sanity CMS.
+2. *Dynamic Product Detail Pages:*
+   - Implemented individual product detail pages using dynamic routing.
+3. *Advanced Category Filters:*
+   - Built category filters to refine product views dynamically.
+4. *Pagination and Related Products:*
+   - Added pagination and "Related Products" sections for better user experience.
+5. *Responsive and Styled Components:*
+   - Ensured all components are fully responsive and styled with TailwindCSS.
+6. *Modular and Reusable Components:*
+   - Created reusable components for scalability and future development.
+
+This implementation demonstrates my ability to design and develop dynamic, scalable, and responsive components for an e-commerce marketplace.
+
+## *Documentation Link Day 04*
+
+https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%20day%204.pdf
+
+---
+
 
 
