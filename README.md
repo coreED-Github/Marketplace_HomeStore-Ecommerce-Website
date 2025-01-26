@@ -117,9 +117,111 @@ Feel free to explore the repository and suggest improvements. Let’s make this 
 *Contact:*  
 - *Name*: Saira  
 - *Email*: [sairanasir853@gmail.com]  
-## *Documentaion Link*
+## *Documentation Link Day 01*
 
 https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/MarketPlace%20Day%201%20Task.pdf
 
 
+
+
+# Day 02: Planning the Technical Foundation
+
+## Overview
+
+On Day 02, I transitioned from business planning to technical preparation for the *HomeStyle Market* e-commerce marketplace. This day was dedicated to creating a high-level technical plan, including system architecture, workflows, and API requirements. These elements will guide the development process and ensure that the technical solution aligns with the business objectives.
+
+---
+
+## Recap of Day 01: Business Focus
+
+### E-Commerce Project Overview:
+- *Marketplace Name*: HomeStyle Market (Furniture/Home Decor)
+- Focused on understanding the business requirements to ensure the marketplace caters to a wide range of customers.
+
+### Business Goals:
+1. Affordable & stylish products (different styles, unique designs, affordable prices).
+2. Wholesale pricing for shop owners (for large quantities).
+3. Timely delivery with affordable and flexible options.
+4. Dedicated brand pages with high-quality brands.
+5. Support for local artisans (small businesses, global customer reach).
+6. Reliable platform with secure payments and detailed product descriptions.
+7. Enhanced customer support (help center).
+
+### Target Audience:
+- Homeowners
+- Renters
+- Shop owners
+- First-time buyers
+- Small businesses
+- Artisans
+- Brand-conscious customers
+- Budget-conscious shoppers
+
+### Data Schema Draft:
+- *Product*: Product ID, Name, Price, Stock Quantity, Category, Description, Image URLs, Brand, Wholesale Price (optional), Wholesale Quantity (optional)
+- *Order*: Order ID, Customer ID (Reference to [Customer]), Product ID (Reference to [Product]), Quantity, Total Price, Order Status, Payment Status, Shipping Address, Order Date
+- *Customer*: Customer ID, Name, Email, Contact Info, Business Name (optional), Wholesale Customer (optional)
+- *Shipment*: Shipment ID, Order ID (Reference to [Order]), Tracking Number, Shipment Status, Shipment Date, Delivery Date (optional)
+- *Delivery Zone*: Zone ID, Zone Name, Coverage Area, Assigned Driver, Estimated Delivery Time, Zone Details
+
+---
+
+## Day 02 Activities: Transitioning to Technical Planning
+
+### 1. Define Technical Requirements
+
+*Frontend Development Approach:*
+- *Framework*: Next.js (for server-side rendering and static site generation)
+    - Dynamic routes for pages (product details).
+    - Data fetching via getStaticProps and getServerSideProps.
+- *Styling*: TailwindCSS (responsive and modern UI design).
+    - Layouts using Flexbox and Grid utilities.
+    - Ensuring responsiveness with breakpoints.
+- *Interactive Components*: React hooks (useState, useEffect), React Icons, Headless UI for accessible components (e.g., dropdowns, modals).
+
+*Backend Development Approach:*
+- *Database*: Sanity CMS (headless CMS for managing product, order, and customer data).
+    - Schemas for products, categories, customers, and orders.
+- *Shipment and Order Tracking*: EasyPost or Shippo API for real-time shipment tracking.
+- *Payment Gateway*: Stripe API for secure online payments.
+
+### Step-by-Step Workflow:
+1. *Frontend Development*: Create pages like Home, Product Listing, Product Details, Cart, Checkout using Next.js and TailwindCSS.
+2. *Backend Setup with Sanity CMS*: Create schemas for products, orders, and customers, and fetch data using GROQ queries.
+3. *API Integrations*: Integrate EasyPost API for shipment tracking and Stripe API for payment processing.
+4. *Testing and Deployment*: Test responsiveness and functionality across devices, then deploy using Vercel.
+
+### 2. Design System Architecture
+
+The system architecture outlines how data flows through the e-commerce system:
+
+- *Frontend (Next.js)*: Displays dynamic data from Sanity CMS and third-party APIs.
+- *Sanity CMS*: Stores content data (products, orders, customer info).
+- *Product Data API*: Retrieves product details from Sanity CMS.
+- *Payment Gateway (Stripe)*: Handles payment processing and updates order status in Sanity CMS.
+- *Shipment Tracking API (EasyPost or Shippo)*: Fetches real-time shipment status.
+
+### 3. Plan API Requirements
+
+- */products* (GET): Fetch all available products from Sanity CMS.
+- */orders* (POST): Create a new order in Sanity CMS.
+- */shipment* (GET): Track the status of an order via third-party shipment API.
+- */delivery-zone* (GET): Fetch delivery zone details (if needed for calculating delivery time).
+
+---
+
+## Conclusion
+
+By focusing on the technical preparation for the marketplace, I’ve laid the foundation for a scalable, efficient solution. This will ensure that the marketplace is robust, user-friendly, and ready for seamless integrations and operations.
+
+---
+
+## Next Steps
+
+- Begin implementing the frontend and backend integration.
+- Start with the core product data integration from Sanity CMS and ensure the basic functionality is in place.
+
+## *Documentation Link Day 02*
+
+https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%2002.pdf
 
