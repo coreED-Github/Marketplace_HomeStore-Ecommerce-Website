@@ -225,3 +225,78 @@ By focusing on the technical preparation for the marketplace, I’ve laid the fo
 
 https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%2002.pdf
 
+
+
+# Hackathon Day 03 - API Integration and Data Migration
+
+## Overview
+On Day 3 of the hackathon, I focused on integrating APIs and transferring data into Sanity CMS to build the backend for a functional marketplace. This task helped me understand how to work with headless CMSs, integrate third-party APIs, and migrate data into a structured schema for a real-world eCommerce application.
+
+## Key Learning Outcomes
+1. *API Integration:* Successfully connected APIs to my Next.js project and validated API responses.
+2. *Data Migration:* Migrated data from an external API into Sanity CMS, ensuring it matched the CMS schema.
+3. *Frontend Implementation:* Built dynamic product pages and a responsive product list page.
+4. *Sanity Studio Management:* Successfully used Sanity Studio to manage product and category data.
+
+## Steps Taken
+
+### 1. API Integration
+- *API Used:* [Hackathon API](https://hackathon-apis.vercel.app/api/products) to fetch product data.
+- *Data Fields:* The API provided product details such as title, price, slug, description, and category.
+
+### 2. Sanity CMS Schemas Configuration
+- Created and referenced the following schemas:
+  - *Category Schema:* category.ts
+  - *Product Schema:* product.ts
+  
+  These schemas were designed to match the structure of the data provided by the API and allow seamless migration into Sanity CMS.
+
+### 3. Data Migration
+- *Migration Script:* Created a script to fetch data from the API and transfer it into Sanity CMS.
+  - Mapped API fields (e.g., title, price, slug, description) to Sanity CMS fields.
+  - Established category references to ensure correct relationships between products and categories.
+
+- *Result:* Data was successfully migrated into Sanity CMS and appeared in the Sanity Studio interface.
+
+### 4. Frontend Implementation
+- *Fetching Data:* Used Sanity's GROQ queries to fetch data directly from Sanity CMS and populate the frontend.
+- *Dynamic Product Pages:* Created a dynamic [slug].tsx page to display detailed product information based on the slug.
+  
+#### Product List Page
+- Displayed all products fetched from Sanity CMS with:
+  - Product image, title, price, and "View Details" button.
+
+#### Dynamic Product Pages
+- Each product detail page was dynamically generated based on the product's slug, showing:
+  - Title, description, price, and product image.
+
+### 5. Sanity Studio View After Migration
+- *Fields in Sanity Studio:* 
+  - Title, Slug, Price, Description, Category Reference, Image.
+- *Search & Edit:* Products can be searched and edited directly within Sanity Studio.
+
+### 6. Browser Results After Migration
+- *Product List Page:* 
+  - Fast-loading page displaying product data responsively.
+- *Dynamic Product Detail Pages:*
+  - Clicking "View Details" navigates to the product’s detailed page with all relevant information.
+
+## Conclusion
+Day 3 was a crucial step in building my marketplace backend. I successfully integrated an external API, migrated data into Sanity CMS, and built a responsive frontend to display product information. This experience has enhanced my ability to manage data, integrate APIs, and implement dynamic pages in Next.js.
+
+## Next Steps
+- Further test the migration process with additional data.
+- Implement additional features such as shopping cart and user authentication.
+- Continue refining the frontend to ensure a seamless user experience.
+
+## Technologies Used
+- *Next.js*
+- *Sanity CMS*
+- *TailwindCSS*
+- *GROQ*
+
+## *Documentation Link Day 03*
+
+https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%20Day%2003%20Task.pdf
+
+
