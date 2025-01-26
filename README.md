@@ -420,4 +420,107 @@ https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/ma
 ---
 
 
+# Day 5 - Testing, Error Handling, and Backend Integration Refinement
 
+On Day 5, I focused on preparing my marketplace for real-world deployment. I ensured that all components were thoroughly tested, optimized for performance, and ready to handle customer-facing traffic. My emphasis was on testing backend integrations, implementing error handling, and refining the overall user experience.
+
+## Core Features Testing
+
+### 1. Product Listing
+*Objective*: Verify that products are displayed correctly on the marketplace.
+
+*Steps*:
+1. Navigate to the homepage or product listing page.
+2. Ensure all products, including their names, images, prices, and discount prices, are displayed as expected.
+3. Check that product information is pulled correctly from the database or CMS.
+
+*Expected Results*: All products should be listed with correct details such as images, names, prices, and any applicable discounts.
+
+### 2. Filters and Categories
+*Objective*: Ensure that the filter and Categories functionality works as expected.
+
+*Steps*:
+1. Use available filters (e.g., categories, price range, tags) to narrow down the product list.
+2. Perform a search by typing relevant keywords (e.g., product name or category).
+3. Check if the search and filters return the correct results.
+
+*Expected Results*: The product list should adjust according to the selected filters or search terms. Results should be accurate and reflect the selected criteria.
+
+### 3. Cart Operations
+*Objective*: Ensure that cart operations (add, update, remove) work correctly.
+
+*Steps*:
+1. Add one or more products to the cart.
+2. Update product quantities in the cart.
+3. Remove products from the cart.
+4. Verify the cart reflects the correct product details and quantities.
+5. Confirm that the cart updates the total price when items are added, removed, or updated.
+
+*Expected Results*: The cart should reflect accurate products, quantities, and total prices after each operation. Changes made to the cart should persist during the session.
+
+### 4. Dynamic Routing
+*Objective*: Verify that dynamic product detail pages load correctly based on product slugs.
+
+*Steps*:
+1. Click on a product from the product listing page.
+2. Ensure that the product detail page loads with the correct information (name, description, price, image, etc.).
+3. Check the URL to ensure it follows the correct dynamic slug pattern.
+
+*Expected Results*: Each product detail page should load correctly and display the appropriate product details. The URL should reflect the product’s unique slug.
+
+---
+
+## Product Details API Test
+
+*Test Summary*:  
+This document outlines the results of testing the Product Details API using Postman. The API was tested for response status, response time, and schema validation.
+
+### Test Results 01:
+
+1. *Test 1: Response Status Code*  
+   - *Status*: Passed  
+   - *Description*: The API returned a 200 OK status code, indicating that the request was successfully processed and the server responded correctly.  
+   - *Expected Result*: Status code should be 200.  
+   - *Actual Result*: Status code was 200.
+
+2. *Test 2: Response Time*  
+   - *Status*: Failed  
+   - *Description*: The response time exceeded the expected threshold of 200ms. The actual response time was 550ms, which is above the defined limit for performance.  
+   - *Expected Result*: Response time should be below 200ms.  
+   - *Actual Result*: Response time was 550ms.  
+   - *Failure Reason*: The API's response time does not meet the required performance standards. Optimization may be required.
+
+3. *Test 3: Response Body Schema Validation*  
+   - *Status*: Passed  
+   - *Description*: The response body contains all the expected schema fields and types, matching the defined structure for product details.  
+   - *Expected Result*: Response body should contain the defined schema fields with appropriate data types.  
+   - *Actual Result*: Schema validation was successful, and the response body includes all expected fields with correct data types.
+
+*Conclusion*:  
+The Product Details API performs well in terms of returning the correct status and schema, but the response time does not meet the expected performance criteria. Optimization may be required to reduce response times to below 200ms.
+
+---
+
+## Error Handling in ShoppingCartModal Component
+
+### 1. Error Handling with Try-Catch
+In the handleCheckoutClick function, a try-catch block is used to handle any errors that may occur during the checkout process. This ensures the application doesn't crash and provides feedback to the user if something goes wrong.
+
+*Code Example*:
+
+```ts
+async function handleCheckoutClick(event: any) {
+  event.preventDefault();
+  try {
+    const result = await redirectToCheckout();
+    if (result?.error) {
+      console.log("result"); // Log error for debugging
+    }
+  } catch (error) {
+    console.log(error); // Catch and log any errors during checkout
+  }
+}
+
+## *Documentation Link Day 05*
+
+https://github.com/coreED-Github/Marketplace_HomeStore-Ecommerce-Website/blob/main/Documentation%20Day%205.pdf
