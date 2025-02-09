@@ -1,0 +1,94 @@
+[
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "Name of Product"
+      },
+      {
+        "of": [
+          {
+            "type": "image"
+          }
+        ],
+        "name": "images",
+        "type": "array",
+        "title": "Product Images"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Description of product"
+      },
+      {
+        "options": {
+          "source": "name"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "Product Slug"
+      },
+      {
+        "name": "price",
+        "type": "number"
+      },
+      {
+        "name": "price_id",
+        "type": "string",
+        "title": "Stripe Price ID"
+      },
+      {
+        "to": [
+          {
+            "type": "category"
+          }
+        ],
+        "name": "category",
+        "type": "reference",
+        "title": "Product Category"
+      }
+    ],
+    "name": "product",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "Name of Category"
+      }
+    ],
+    "name": "category",
+    "type": "document",
+    "title": "Categories"
+  },
+  {
+    "fields": [
+      {
+        "name": "image1",
+        "type": "image",
+        "title": "First Image"
+      },
+      {
+        "name": "image2",
+        "type": "image",
+        "title": "Second Image"
+      }
+    ],
+    "name": "heroImage",
+    "type": "document",
+    "title": "Two Hero Images"
+  }
+]

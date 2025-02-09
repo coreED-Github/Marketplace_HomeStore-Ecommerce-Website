@@ -13,6 +13,7 @@ import Brand from "./components/Brand/page";
 export default function Home() {
   return (
    <div className="mr-2 ml-2">
+   
     <Hero/>
 
    
