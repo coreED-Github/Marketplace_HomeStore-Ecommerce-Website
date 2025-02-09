@@ -1,4 +1,4 @@
-export default {
+const heroImages = {
     name: 'heroImage',
     type: 'document',
     title: 'Two Hero Images',
@@ -15,3 +15,4 @@ export default {
       },
     ],
   }
+  export default heroImages  
