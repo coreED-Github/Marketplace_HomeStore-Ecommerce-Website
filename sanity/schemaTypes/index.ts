@@ -7,5 +7,5 @@ import heroImages from './heroImages'
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [product , category ,  heroImages ],
+  types: [product , category , heroImages  ],
 }

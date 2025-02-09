@@ -100,7 +100,7 @@ useEffect(() => {
               >
                
                   <div className="aspect-square w-[300px] h-[250px]  overflow-hidden rounded-md bg-white group-hover:opacity-75">
-
+                  <Link href={`/product/${product.slug}`}>
                     <Image
                       src={product.imageUrl}
                       alt="Product image"
@@ -108,6 +108,7 @@ useEffect(() => {
                       height={500}
                       width={500}
                     />
+                    </Link>
                   </div>
              <div className="mt-4 flex justify-between">
                   <div>
