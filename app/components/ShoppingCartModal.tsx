@@ -99,8 +99,8 @@ export default function ShoppingCartModal() {
             </p>
 
             <div className="mt-6 flex justify-center items-center">
-              
-  <Link href="/Checkout">
+
+              <Link href="/Checkout">
                 <Button className="bg-white flex justify-center items-center text-black border border-gray-700 rounded-md px-4 py-2">
                   Check Out
                 </Button>
